@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<style type="text/css">
+			.detail p {
+				width: 100%;
+				font-size: 14px;
+				color: #353535;
+				text-indent: 28px;
+				padding-bottom: 10px;
+				line-height: 30px;
+				padding: 5px 0;
+			}
+			
+			#tabRegister .td1 {
+				width: 37%;
+				text-align: right;
+				font-size: 16px;
+			}
+			
+			#tabRegister .td2 {
+				text-align: left;
+			}
+			
+			#tabRegister .textInput {
+				border-width: 1px;
+				border-style: solid;
+				border-radius: 5px;
+				border-color: #0094ff;
+				height: 25px;
+				width: 300px
+			}
+			
+			#tabRegister .trHight {
+				height: 50px;
+				line-height: 50px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<table style="width:100%" id="tabRegister">
+			<tr class="trHight">
+				<td class="td1">
+					用户名
+				</td>
+				<!--用户名信息验证-->
+				<td class="td2"><input type="text" id="inp_user" class="textInput" onblur="m_userTipOnblur();" />
+					<span id="span_userTip" style="color:#f00;display:inline-block;">*</span>
+				</td>
+				<!--用户名信息验证-->
+			</tr>
+
+			<tr class="trHight">
+				<td class="td1">
+					姓名
+				</td>
+				<!--姓名信息验证-->
+				<td class="td2"><input type="text" id="inp_name" class="textInput" onfocus="m_nameTipOnFocus();" onblur="m_nameTipOnblur();" />
+					<span style="color:#f00">*</span>
+					<span id="span_nameTip" style="color:#f00;display:none;"></span>
+				</td>
+				<!--姓名信息验证-->
+			</tr>
+			<tr class="trHight">
+				<td class="td1">
+					密码
+				</td>
+				<!--密码信息验证-->
+				<td class="td2">
+					<input type="text" id="inp_name" class="textInput" onfocus="m_nameTipOnFocus();" onblur="m_nameTipOnblur();" />
+					<!--<asp:TextBox id="asp_psw" class="textInput"  runat="server"  TextMode="Password" onblur="m_PasswordTipOnblur();"></asp:TextBox>-->
+					<span style="color:#f00">*</span>
+					<span id="span_PasswordTip" style="color:#f00;display:none;"></span>
+				</td>
+				<!--密码信息验证-->
+			</tr>
+
+			<tr class="trHight">
+				<td class="td1">
+					邮箱
+				</td>
+				<!--邮箱-->
+				<td class="td2"><input type="text" id="Text2" class="textInput" onclick="zcchoose()" />
+				</td>
+				<!--邮箱-->
+			</tr>
+			<tr class="trHight">
+				<td class="td1">
+					联系电话
+				</td>
+				<!--联系电话-->
+				<td class="td2"><input type="text" id="inp_tel" class="textInput" onblur="m_telTipOnblur();" />
+					<span style="color:#f00">*</span>
+					<span id="span_tel" style="color:#f00;display:none;"></span>
+				</td>
+				<!--联系电话-->
+			</tr>
+			<tr class="trHight">
+				<td class="td1">
+					收货地址
+				</td>
+				<!--单位-->
+				<td class="td2"><input type="text" id="Text4" class="textInput" onclick="dwchoose()" />
+				</td>
+				<!--单位-->
+			</tr>
+
+			<tr style="height:70px;line-height:70px;">
+				<td class="td1">
+				</td>
+				<td class="td2" style="padding-top :10px;">
+					<input type="button" value="注册" width="300px" height="50px">
+					<!--  <img  src="images/zhuce.png" / onclick="m_zhuce();">-->
+				</td>
+			</tr>
+		</table>
+
+	</body>
+
+</html>
